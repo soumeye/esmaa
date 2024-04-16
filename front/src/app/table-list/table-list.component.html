@@ -1,0 +1,93 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-green">
+                      <h4 class="card-title ">Gestion des utilisateurs</h4>
+                      
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      Nom
+                                  </th>
+                                  <th>
+                                      Adresse email
+                                  </th>
+                                  <th>
+                                     Role
+                                  </th>
+                                  <th>Action</th>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          1
+                                      </td>
+                                      <td>
+                                          Dakota Rice
+                                      </td>
+                                      <td>
+                                          Niger
+                                      </td>
+                                      <td>
+                                        <button class="btn btn-danger  custom-btn" (click)="ouvrirPopupFormulaireModification()" >Modifier</button>
+                                       
+                                        <button  class="btn btn-danger  custom-btn">Supprimer</button>
+                                      </td>
+                                  </tr>
+                                  
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div *ngIf="afficherFormulaireModification">
+                    <!-- Contenu du formulaire -->
+                    <div class="card-body">
+                       
+                            <!-- Contenu de votre formulaire -->
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Fist Nameff" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Fist Name" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Fist Name" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                    
+                                </div>
+
+                        
+                                  
+
+                                   <button mat-raised-button  class="btn btn-danger pull-right" (click)="fermerPopupFormulaireModification()" > Retour</button>
+                                <div class="clearfix"></div>
+                            
+                        </form>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

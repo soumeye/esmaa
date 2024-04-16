@@ -1,0 +1,68 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-green">
+                        <h4 class="card-title">Formulaire de Participation </h4>
+                    </div>
+                    
+                  
+
+                    <div >
+                        <!-- Contenu du formulaire -->
+                        <div class="card-body">
+                           
+                                <!-- Contenu de votre formulaire -->
+                                <form (ngSubmit)="onSubmit()">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Nom Equipe" type="text" [(ngModel)]="nomEquipe" >
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="composition" type="text" [(ngModel)]="composition" >
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="slogan" type="text" [(ngModel)]="slogan" >
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                            
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="logo" type="text" [(ngModel)]="logo" >
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                            
+                                      
+
+                                       <button mat-raised-button  class="btn btn-danger pull-right"  > Participer</button>
+                                    <div class="clearfix"></div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

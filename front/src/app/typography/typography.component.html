@@ -1,0 +1,125 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-green">
+                        <h4 class="card-title">Gestion des équipes</h4>
+                    </div>
+                    
+                    <div class="card-body" *ngIf="!afficherFormulaire && ! afficherFormulaireModification" >
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <th>Nom de l'équipe</th>
+                                    <th>Leader</th>
+                                    <th>Nombre de membres</th>
+                                    <th>Statut de soumission</th>
+                                    <th>Actions</th>
+                                </thead>
+                                <tbody *ngFor="let group of groups">
+                                    <tr>
+                                        <td>{{ group.name }} </td>
+                                        <td>{{ group.description }}</td>
+                                        <td>Niger</td>
+                                        <td>Niger</td>
+                                        <td>
+                                          <button class="btn btn-danger custom-btn" (click)="ouvrirPopupFormulaire()">Voir</button>
+                                          <button class="btn btn-danger custom-btn"  (click)="ouvrirPopupFormulaireModification()" >Modifier</button>
+                                          <button class="btn btn-danger custom-btn">Supprimer</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div *ngIf="afficherFormulaire">
+                        <!-- Contenu du formulaire -->
+                        <div class="card-body">
+                           
+                                <!-- Contenu de votre formulaire -->
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Fist Name" type="text">
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Fist Name" type="text">
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Fist Name" type="text">
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                            
+                                      
+
+                                       <button mat-raised-button  class="btn btn-danger pull-right" (click)="fermerPopupFormulaire()" > Retour</button>
+                                    <div class="clearfix"></div>
+                                
+                            </form>
+                        </div>
+                    </div>
+
+                    <div *ngIf="afficherFormulaireModification">
+                        <!-- Contenu du formulaire -->
+                        <div class="card-body">
+                           
+                                <!-- Contenu de votre formulaire -->
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Fist Nameff" type="text">
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Fist Name" type="text">
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                          <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Fist Name" type="text">
+                                          </mat-form-field>
+                                        </div>
+                                        
+                                    </div>
+
+                            
+                                      
+
+                                       <button mat-raised-button  class="btn btn-danger pull-right" (click)="fermerPopupFormulaireModification()" > Retour</button>
+                                    <div class="clearfix"></div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

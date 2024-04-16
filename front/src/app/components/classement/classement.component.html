@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
+    <title>Front office</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>S3C .</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="/acceuil" class="link active">Acceuil</a></li>
+                    <li><a routerLink="/challenge" class="link ">Challenge</a></li>
+                    <li><a routerLink="/classement" class="link ">Classement</a></li>
+                    <li><a routerLink="/Apropos" class="link ">A propos</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <!-- <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> -->
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        <div class="container">
+            <ul class="responsive-table">
+                <li class="table-header">
+                    <div class="col col-1">Numer d'equipe</div>
+                    <div class="col col-2">Nom d'equipe</div>
+                    <div class="col col-3">Points defi1</div>
+                    <div class="col col-4">Points defi2</div>
+                    <div class="col col-5">Points defi3</div>
+                </li>
+                <li class="table-row">
+                    <div class="col col-1" data-label="Numer d'equipe">1</div>
+                    <div class="col col-2" data-label="Nom d'equipe">404</div>
+                    <div class="col col-3" data-label="Points defi1">65</div>
+                    <div class="col col-4" data-label="Points defi2">79</div>
+                    <div class="col col-5" data-label="Points defi3">35</div>
+                </li>
+                <li class="table-row">
+                    <div class="col col-1" data-label="Numer d'equipe">2</div>
+                    <div class="col col-2" data-label="Nom d'equipe">NetCode</div>
+                    <div class="col col-3" data-label="Points defi1">65</div>
+                    <div class="col col-4" data-label="Points defi2">73</div>
+                    <div class="col col-5" data-label="Points defi3">25</div>
+                </li>
+                <li class="table-row">
+                    <div class="col col-1" data-label="Numer d'equipe">3</div>
+                    <div class="col col-2" data-label="Nom d'equipe">Les etoiles</div>
+                    <div class="col col-3" data-label="Points defi1">64</div>
+                    <div class="col col-4" data-label="Points defi2">72</div>
+                    <div class="col col-5" data-label="Points defi3">15</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

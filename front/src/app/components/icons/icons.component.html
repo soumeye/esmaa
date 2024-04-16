@@ -1,0 +1,33 @@
+<!-- mon-composant.component.html -->
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-green">
+                        <h4 class="card-title">Classement des équipes</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <th>Position</th>
+                                    <th>Nom de l'équipe</th>
+                                    <th>Score</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let equipe of classementEquipes; let i = index">
+                                        <td>{{ i + 1 }}</td>
+                                        <td>{{ equipe.equipe }}</td>
+                                        <td>{{ equipe.score }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

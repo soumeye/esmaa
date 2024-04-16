@@ -1,0 +1,14 @@
+.card-header {
+    background-color: #2196f3;
+}
+
+  /* Styles pour les boutons */
+  .custom-btn {
+    font-size: 12px; /* Définit la taille de la police */
+    padding: 5px 10px;
+    margin-right: 10px; /* Ajuste le rembourrage */
+  }
+
+  .formulaire-style {
+    margin-top: 4px; /* Ajustez la marge supérieure selon vos besoins */
+  }

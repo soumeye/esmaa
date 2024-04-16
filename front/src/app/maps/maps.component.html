@@ -1,0 +1,93 @@
+
+
+<!-- Section pour afficher les challenges existants -->
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-green">
+                      <h4 class="card-title">Challenges</h4>
+                      <!-- Bouton pour ajouter un nouveau challenge -->
+                      <button class="btn btn-danger custom-btn" (click)="toggleAddForm()" >Ajouter</button>
+                  </div>
+                  
+                        <!-- Contenu du formulaire ajout -->
+                        <div class="card-body" *ngIf="showAddForm">
+                            <!-- Contenu de votre formulaire -->
+                            <form (submit)="createChallenge()">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Titre" type="text" [(ngModel)]="titre" name="titre">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Description" type="text" [(ngModel)]="description" name="description">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                              
+                                <div class="row" *ngFor="let critere of grilleEvaluation; let i = index">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Critère" type="text" [(ngModel)]="grilleEvaluation[i].critere" name="critere">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Poids" type="number" [(ngModel)]="grilleEvaluation[i].poids" name="poids">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <button type="button" mat-raised-button class="btn btn-danger " (click)="addCritere()">Ajouter grille Evaluation</button>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="file" id="myFile" [(ngModel)]="livrablesAttendus" name="filename">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="date" id="dateLimite" name="dateLimite" [(ngModel)]="dateLimite">
+                                    </div>
+                                </div>
+                                <button type="submit" mat-raised-button class="btn btn-danger pull-right">Créer</button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    
+                  <div class="card-body" *ngIf="!showAddForm" >
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class="text-primary">
+                                  <th>Titre</th>
+                                  <th>Description</th>
+                                  <!-- Ajoutez d'autres colonnes au besoin -->
+                              </thead>
+                              <tbody>
+                                  <!-- Itérer sur les challenges et afficher chaque challenge -->
+                                  <tr *ngFor="let challenge of challenges">
+                                      <td>{{ challenge.titre }}</td>
+                                      <td>{{ challenge.description }}</td>
+                                      <!-- Ajoutez d'autres colonnes au besoin -->
+                                      <td>
+                                          <!-- Boutons pour modifier et supprimer le challenge -->
+                                          <button class="btn btn-danger custom-btn">Modifier</button>
+                                          <button class="btn btn-danger custom-btn">Supprimer</button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- challenge.component.html -->
+
